@@ -1,4 +1,4 @@
-# BookEase — Stage 2
+# BookEase — Appointment Booking & Business Management Website
 
 Stage 2 includes the Stage 1 homepage plus a fully interactive Services catalogue.
 
@@ -38,13 +38,13 @@ Service Details and Booking pages are planned for later stages. Their links are 
 - Uses the existing BookEase colours and shared header/footer styles.
 - This remains a frontend portfolio demo; no real bookings or payments are processed.
 
-\n## Stage 4 – Booking Page\n
+## Stage 4 – Booking Page\n
 - Open `booking.html` by selecting **Book this service** on a Service Details page.
 - The selected service is loaded from the URL query parameter.
 - The form validates name, email, 10-digit phone number, date, time and demo consent.
 - A successful demo booking is saved in browser LocalStorage under `bookeaseBookings`.
 - No real appointment, business notification or payment is made.
-\n\n## Stage 5 – My Appointments\n\n- Open `appointments.html` to view bookings saved from Stage 4.\n- Filter by All, Upcoming, Past and Cancelled.\n- Cancel an upcoming demo booking; its status is updated in LocalStorage.\n- Uses the existing `bookeaseBookings` LocalStorage key.\n- These are local portfolio-demo records only, not real appointments.\n
+## Stage 5 – My Appointments\n\n- Open `appointments.html` to view bookings saved from Stage 4.\n- Filter by All, Upcoming, Past and Cancelled.\n- Cancel an upcoming demo booking; its status is updated in LocalStorage.\n- Uses the existing `bookeaseBookings` LocalStorage key.\n- These are local portfolio-demo records only, not real appointments.\n
 
 ## Stage 6 – Customer Account
 
