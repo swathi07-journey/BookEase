@@ -1,93 +1,109 @@
-# BookEase — Appointment Booking & Business Management Website
+# BookEase – Appointment Booking & Business Management Website
 
-Stage 2 includes the Stage 1 homepage plus a fully interactive Services catalogue.
+## About the Project
 
-## Run in VS Code
-1. Extract this ZIP.
-2. Open the `bookease` folder in VS Code.
-3. Install the Live Server extension.
-4. Right-click `index.html` and choose **Open with Live Server**.
-5. Select **Services** in the header, or open `services.html` directly.
+BookEase is a responsive appointment booking and business management website developed using HTML5, CSS3 and Vanilla JavaScript.
 
-## Features
-- 18 fictional sample services and 8 fictional professionals in `js/data.js`
-- Search by service name, category or provider
-- Six category filters
-- Minimum and maximum price sliders
-- Duration and minimum-rating filters
-- Sort by recommended, price low-to-high, price high-to-low and highest rated
-- Clear all filters and helpful no-results state
-- Responsive cards, filter panel and mobile layout
-- Details and Book Now links carry the selected service ID for upcoming stages
+It is designed for service-based businesses such as salons, spas, clinics, fitness centres and consultants. Customers can explore services, select professionals, book appointments and manage their bookings. Administrators can manage business activities through a dedicated dashboard.
 
-## Demo limitations
-Service Details and Booking pages are planned for later stages. Their links are placeholders until those stages are built. No real appointments or payments are processed. Sample images load from Unsplash and require internet access.
+## Why I Developed This Project
 
-## Files
-- `index.html` — Stage 1 homepage
-- `services.html` — Stage 2 service catalogue
-- `css/style.css`, `css/responsive.css`, `css/services.css`
-- `js/data.js`, `js/main.js`, `js/services.js`
+Many service-based businesses need an organised way to manage appointments, services, professionals and special offers.
 
+I developed BookEase to demonstrate how a digital appointment booking system can simplify the booking experience for customers and make daily business management easier for administrators.
 
-## Stage 3 – Service Details Page
-- Open `services.html` and select **Details** on any service card.
-- `service-details.html?id=s1` loads the selected service using its URL ID.
-- Shows service description, sample price, duration, rating, matching sample professional, illustrative reviews and a booking link.
-- Missing or invalid service IDs show a friendly error state.
-- Uses the existing BookEase colours and shared header/footer styles.
-- This remains a frontend portfolio demo; no real bookings or payments are processed.
+This project also helped me improve my frontend development, UI/UX design, JavaScript programming and LocalStorage skills by building a practical, business-oriented application.
 
-## Stage 4 – Booking Page\n
-- Open `booking.html` by selecting **Book this service** on a Service Details page.
-- The selected service is loaded from the URL query parameter.
-- The form validates name, email, 10-digit phone number, date, time and demo consent.
-- A successful demo booking is saved in browser LocalStorage under `bookeaseBookings`.
-- No real appointment, business notification or payment is made.
-## Stage 5 – My Appointments\n\n- Open `appointments.html` to view bookings saved from Stage 4.\n- Filter by All, Upcoming, Past and Cancelled.\n- Cancel an upcoming demo booking; its status is updated in LocalStorage.\n- Uses the existing `bookeaseBookings` LocalStorage key.\n- These are local portfolio-demo records only, not real appointments.\n
+## Project Objectives
 
-## Stage 6 – Customer Account
+- Make appointment booking simple and convenient.
+- Provide an organised service discovery experience.
+- Help administrators manage business activities.
+- Create a responsive and user-friendly interface.
+- Demonstrate practical frontend development skills.
 
-- `account.html` includes Login and Create Account forms with basic client-side validation.
-- A successful registration creates a demo account and opens `profile.html`.
-- Login checks the demo account stored in this browser.
-- `profile.html` displays the saved name, email and phone number.
-- Edit Profile updates the customer details; Log out clears the demo session.
-- Account data uses `bookeaseAccount`; the current demo session uses `bookeaseCurrentUser`.
-- This is frontend-only demonstration authentication. Passwords are stored locally for demo purposes only; do not enter a real or reused password.
-- Existing Stage 1–5 pages and the `bookeaseBookings` appointment storage key are preserved.
+## Key Features
 
+### Customer Features
+- Browse and explore available services.
+- Search and filter services by different criteria.
+- View service details, prices, ratings and professionals.
+- Select appointment dates and available time slots.
+- Book appointments and view booking confirmation.
+- View appointments using different status filters.
+- Cancel eligible demo bookings.
+- Register, log in and manage customer profile information.
 
-## Stage 7 – Business Dashboard
+### Admin Features
+- Demo admin login.
+- Dashboard with booking statistics.
+- View and manage appointments.
+- Add, edit, hide, activate and remove services.
+- Add, edit and manage professionals.
+- Configure business availability and working days.
+- Create and manage special offers.
+- View business activity through dashboard indicators.
 
-- Open `dashboard.html` to view the fictional Bright Studio business overview.
-- Summary cards show total, upcoming and past appointments plus the value of active demo bookings.
-- Booking activity chart shows the last seven days based on locally saved demo bookings.
-- Popular services are ranked using the saved booking records.
-- Recent appointments display customer, service, date/time, reference and status.
-- The dashboard reads the existing `bookeaseBookings` LocalStorage key and refreshes when browser storage changes.
-- All figures are demonstration data from this browser only. No real business, customers, payments or revenue are connected.
-- Stage 8 will add the separate management screens.
+## Technologies Used
 
+- **HTML5** – Website structure.
+- **CSS3** – Styling, layouts and responsive design.
+- **JavaScript** – Interactive features and application logic.
+- **LocalStorage** – Storing demo bookings, account information and management data.
+- **Visual Studio Code** – Development environment.
+- **Live Server** – Running the project locally.
 
-## Stage 8 – Business Management
-- Admin demo login: username `admin123`, password `1234` (use the Login tab on account.html).
-- Successful admin login opens dashboard.html.
-- Dashboard Manage button opens dashboard-manage.html.
-- Manage Services: add, edit, hide/show and remove services.
-- Manage Appointments: confirm or cancel demo bookings.
-- Manage Offers: publish date-based percentage discounts shown on the customer service catalog.
-- Data is stored in this browser using LocalStorage. This is a frontend portfolio demo, not production authentication or a real payment/revenue system.
+## Project Structure
 
+- `index.html` – Homepage.
+- `services.html` – Services catalogue.
+- `service-details.html` – Service details.
+- `booking.html` – Appointment booking.
+- `appointments.html` – Customer appointments.
+- `account.html` – Customer and admin login.
+- `profile.html` – Customer profile.
+- `dashboard.html` – Admin dashboard.
+- `dashboard-manage.html` – Business management.
+- `css/` – Stylesheets.
+- `js/` – JavaScript files.
+- Asset folders – Images and other resources.
 
-## Final integrated release – Stages 9–13
-- Professionals: add, edit, activate/deactivate and remove demo professionals in the Manage > Professionals tab. Stored in `bookeaseProfessionals`.
-- Availability: configure opening/closing times, weekly working days and 15/30/45/60-minute intervals in Manage > Availability. Stored in `bookeaseAvailability`; the customer booking form generates slots from these settings.
-- Services: service records remain in `bookeaseManagedServices`; add/edit/hide/remove operations update the customer catalogue. Removed services are hidden rather than destroying historical references.
-- Offers: create, activate/deactivate and remove dated percentage offers; choose all services or one service. Expired offers are marked inactive. Stored in `bookeaseOffers`.
-- Appointments: admin can confirm, complete or cancel saved demo bookings while preserving the `bookeaseBookings` key and booking references.
-- Dashboard: includes cancelled booking and active professional indicators.
-- All features use browser LocalStorage and fictional portfolio data. Admin login, bookings, offers and revenue are not production-secure or connected to real services/payments.
+## How to Run the Project
 
-## Run
-Extract the ZIP, open the `bookease` folder in VS Code and launch `index.html` with Live Server. For admin, use the demo credentials listed in the Stage 8 section of this README.
+1. Download or clone this repository.
+2. Extract the project if downloaded as a ZIP file.
+3. Open the `bookease` project folder in Visual Studio Code.
+4. Install the Live Server extension if needed.
+5. Right-click `index.html`.
+6. Select **Open with Live Server**.
+7. Explore the customer and admin features.
+
+## Admin Demo Login
+
+**Username:** `admin123`
+
+**Password:** `1234`
+
+These predefined credentials are provided only to demonstrate the admin dashboard. This project does not implement production-level authentication.
+
+## Demo Limitations
+
+- The project uses fictional sample services, professionals and business data.
+- Appointment and account information is stored in browser LocalStorage.
+- No real appointments, payments or business notifications are processed.
+- Admin authentication is for demonstration purposes only.
+- LocalStorage data is specific to the browser where the project is running.
+- Sample images may require an internet connection.
+
+## Future Improvements
+
+- Backend integration and database connectivity.
+- Secure authentication and role-based authorization.
+- Online payment integration.
+- Email and SMS appointment notifications.
+- Real-time appointment availability.
+- Deployment with a live backend.
+
+## Project Purpose
+
+BookEase is a frontend portfolio project developed to demonstrate my skills in UI/UX design and frontend web development through a practical appointment booking and business management application.
