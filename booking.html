@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Choose a date and time for your BookEase demo appointment.">
+<title>Book Appointment | BookEase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/booking.css">
+<script src="js/data.js" defer></script><script src="js/main.js" defer></script><script src="js/booking.js" defer></script>
+</head>
+<body>
+<div class="announcement-bar">A simpler way to plan your day <span>Book your demo appointment</span></div>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+<nav class="primary-nav" id="primaryNav" aria-label="Main navigation"><a href="index.html">Home</a><a class="active" href="services.html">Services</a><a href="index.html#how-it-works">How it works</a><a href="index.html#about">About us</a><a href="index.html#contact">Contact</a></nav>
+<div class="nav-actions"><a class="login-link" href="account.html">Log in</a><a class="btn btn-dark btn-small" href="account.html#register">Sign up</a><a class="btn btn-primary btn-small nav-book" href="services.html">Book appointment</a></div>
+</div></header>
+<main>
+<div class="container booking-breadcrumb"><a href="services.html">Services</a><span>›</span><a id="backToDetails" href="services.html">Service details</a><span>›</span><span>Book appointment</span></div>
+<section class="booking-section"><div class="container">
+<div class="booking-heading"><span class="eyebrow"><span class="eyebrow-dot"></span> YOUR APPOINTMENT</span><h1>Make time for <span>yourself.</span></h1><p>Choose a convenient date and time, then add your contact details.</p></div>
+<div class="booking-layout" id="bookingLayout">
+<aside class="booking-summary" id="bookingSummary"><div class="summary-loading">Loading selected service...</div></aside>
+<section class="booking-form-card">
+<div class="booking-step"><span>01</span><div><strong>Your details</strong><small>Tell us how to reach you</small></div></div>
+<form id="bookingForm" novalidate>
+<div class="form-grid">
+<div class="form-field full"><label for="customerName">Full name *</label><input id="customerName" name="customerName" type="text" placeholder="Enter your name" autocomplete="name" required maxlength="70"></div>
+<div class="form-field"><label for="customerEmail">Email address *</label><input id="customerEmail" name="customerEmail" type="email" placeholder="name@example.com" autocomplete="email" required></div>
+<div class="form-field"><label for="customerPhone">Phone number *</label><input id="customerPhone" name="customerPhone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" maxlength="10" required></div>
+<div class="form-field"><label for="bookingDate">Appointment date *</label><input id="bookingDate" name="bookingDate" type="date" required></div>
+<div class="form-field"><label for="bookingTime">Available time *</label><select id="bookingTime" name="bookingTime" required><option value="">Choose a time</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option></select></div>
+<div class="form-field full"><label for="professional">Preferred professional</label><select id="professional" name="professional"><option value="">Any available professional</option></select></div>
+<div class="form-field full"><label for="bookingNotes">Additional note <span>(optional)</span></label><textarea id="bookingNotes" name="bookingNotes" rows="3" maxlength="300" placeholder="Anything you would like us to know?"></textarea></div>
+</div>
+<p class="form-error" id="formError" role="alert"></p>
+<label class="demo-consent"><input type="checkbox" id="demoConsent" required><span>I understand this is a portfolio demo. No real appointment or payment will be made.</span></label>
+<button class="btn btn-primary booking-submit" type="submit">Confirm demo appointment <span>→</span></button>
+<p class="form-footnote">No payment details required. Your sample booking is saved only in this browser.</p>
+</form>
+<div class="booking-success" id="bookingSuccess" hidden aria-live="polite"></div>
+</section>
+</div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a><p>Your time. Your choice. Your appointment. A simple demo platform for discovering services and planning appointments.</p></div><div><h3>Explore</h3><a href="index.html">Home</a><a href="services.html">Services</a><a href="index.html#how-it-works">How it works</a></div><div><h3>Popular services</h3><a href="services.html?category=Beauty%20%26%20Salon">Beauty & Salon</a><a href="services.html?category=Hair%20Styling">Hair styling</a><a href="services.html?category=Fitness">Fitness</a></div><div><h3>Support</h3><a href="index.html#contact">Contact us</a><a href="appointments.html">My appointments</a><a href="account.html">My account</a></div></div><div class="container footer-bottom"><span>© 2026 BookEase. Portfolio demonstration only.</span><span>No real bookings or payments</span></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>

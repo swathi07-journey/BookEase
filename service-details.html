@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="View service information and professional profiles on BookEase.">
+<title>Service Details | BookEase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/details.css">
+<script src="js/data.js" defer></script><script src="js/main.js" defer></script><script src="js/details.js" defer></script>
+</head>
+<body>
+<div class="announcement-bar">A simpler way to plan your day <span>Discover services near you</span></div>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+<nav class="primary-nav" id="primaryNav" aria-label="Main navigation"><a href="index.html">Home</a><a class="active" href="services.html">Services</a><a href="index.html#how-it-works">How it works</a><a href="index.html#about">About us</a><a href="index.html#contact">Contact</a></nav>
+<div class="nav-actions"><a class="login-link" href="account.html">Log in</a><a class="btn btn-dark btn-small" href="account.html#register">Sign up</a><a class="btn btn-primary btn-small nav-book" href="services.html">Book appointment</a></div>
+</div></header>
+<main>
+<div class="container detail-breadcrumb"><a href="services.html">Services</a><span>›</span><span id="crumbName">Service details</span></div>
+<section class="detail-section"><div class="container" id="detailContent">
+<div class="detail-loading">Loading service details...</div>
+</div></section>
+<section class="section detail-trust"><div class="container trust-grid">
+<div><span class="trust-icon">✓</span><strong>Clear service information</strong><p>Review the sample price and duration before continuing.</p></div>
+<div><span class="trust-icon">♡</span><strong>Professional profiles</strong><p>Explore experience and specialisation details.</p></div>
+<div><span class="trust-icon">▦</span><strong>Simple next step</strong><p>Continue to the demo appointment form when ready.</p></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a><p>Your time. Your choice. Your appointment. A simple demo platform for discovering services and planning appointments.</p></div><div><h3>Explore</h3><a href="index.html">Home</a><a href="services.html">Services</a><a href="index.html#how-it-works">How it works</a></div><div><h3>Popular services</h3><a href="services.html?category=Beauty%20%26%20Salon">Beauty & Salon</a><a href="services.html?category=Hair%20Styling">Hair styling</a><a href="services.html?category=Fitness">Fitness</a></div><div><h3>Support</h3><a href="index.html#contact">Contact us</a><a href="appointments.html">My appointments</a><a href="account.html">My account</a></div></div><div class="container footer-bottom"><span>© 2026 BookEase. Portfolio demonstration only.</span><span>No real bookings or payments</span></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>

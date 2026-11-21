@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BookEase demo business management workspace.">
+<title>Manage Business | BookEase</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/manage.css">
+<script src="js/data.js" defer></script><script src="js/manage.js" defer></script>
+</head>
+<body>
+<div class="announcement-bar">BOOKEASE BUSINESS <span>Manage your demo business</span></div>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="dashboard.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a>
+<nav class="primary-nav"><a href="dashboard.html">Overview</a><a href="index.html">View website</a></nav>
+<div class="nav-actions"><span class="business-user">Admin workspace</span><button class="btn btn-outline btn-small" id="adminLogout" type="button">Log out</button></div>
+</div></header>
+<main class="manage-main"><div class="container">
+<div class="manage-heading"><div><span class="eyebrow">BUSINESS CONTROL CENTER</span><h1>Manage your business</h1><p>Manage services, appointments, professionals, offers and business availability.</p></div><a class="btn btn-primary" href="dashboard.html">← Back to dashboard</a></div>
+<div class="manage-tabs" role="tablist">
+<button class="manage-tab active" data-tab="services" type="button">Services</button>
+<button class="manage-tab" data-tab="appointments" type="button">Appointments</button>
+<button class="manage-tab" data-tab="offers" type="button">Offers</button>
+<button class="manage-tab" data-tab="professionals" type="button">Professionals</button>
+<button class="manage-tab" data-tab="availability" type="button">Availability</button>
+</div>
+<section class="manage-panel" id="servicesPanel">
+<div class="manage-panel-head"><div><h2>Service management</h2><p>Add, update or remove services shown on the customer website.</p></div><button class="btn btn-primary" id="addServiceBtn" type="button">+ Add service</button></div>
+<form id="serviceForm" class="manage-form" hidden>
+<input type="hidden" id="serviceId">
+<label>Service name<input id="serviceName" required maxlength="55" placeholder="e.g. Express Hair Styling"></label>
+<label>Category<select id="serviceCategory"><option>Beauty & Salon</option><option>Hair Styling</option><option>Spa & Wellness</option><option>Healthcare</option><option>Fitness</option><option>Consulting</option></select></label>
+<label>Provider<input id="serviceProvider" required maxlength="55" placeholder="Business / professional name"></label>
+<label>Price (₹)<input id="servicePrice" type="number" min="1" max="100000" required></label>
+<label>Duration (minutes)<input id="serviceDuration" type="number" min="10" max="480" step="5" value="30" required></label>
+<label class="wide">Description<textarea id="serviceDescription" rows="2" maxlength="180" required placeholder="Describe this service"></textarea></label>
+<label>Image URL (optional)<input id="serviceImage" type="url" placeholder="https://..."></label>
+<div class="form-actions"><button class="btn btn-primary" type="submit">Save service</button><button class="btn btn-outline" id="cancelServiceBtn" type="button">Cancel</button></div>
+</form>
+<div id="serviceList" class="manage-list"></div>
+</section>
+<section class="manage-panel" id="appointmentsPanel" hidden>
+<div class="manage-panel-head"><div><h2>Appointment management</h2><p>Confirm or cancel customer demo bookings.</p></div><span class="manage-count" id="appointmentCount">0 bookings</span></div>
+<div class="appointment-tools"><label>Search bookings<input id="appointmentSearch" type="search" placeholder="Customer, service or reference"></label><label>Filter status<select id="appointmentStatusFilter"><option value="all">All statuses</option><option>Demo booking</option><option>Confirmed</option><option>Completed</option><option>Cancelled</option></select></label></div>
+<div id="appointmentList" class="manage-list"></div>
+</section>
+<section class="manage-panel" id="offersPanel" hidden>
+<div class="manage-panel-head"><div><h2>Festival offers & discounts</h2><p>Create a discount that appears on customer service cards.</p></div></div>
+<form id="offerForm" class="manage-form">
+<label>Offer name<input id="offerName" required maxlength="45" placeholder="e.g. Diwali Special"></label>
+<label>Discount (%)<input id="offerDiscount" type="number" min="1" max="80" required placeholder="20"></label>
+<label>Start date<input id="offerStart" type="date" required></label>
+<label>End date<input id="offerEnd" type="date" required></label>
+<label>Apply to service<select id="offerService"><option value="all">All active services</option></select></label>
+<div class="form-actions"><button class="btn btn-primary" type="submit">Publish offer</button></div>
+</form>
+<div id="offerList" class="manage-list"></div>
+</section>
+<section class="manage-panel" id="professionalsPanel" hidden>
+ <div class="manage-panel-head"><div><h2>Professionals management</h2><p>Add and manage the professionals customers can select when booking.</p></div><button class="btn btn-primary" id="addProfessionalBtn" type="button">+ Add professional</button></div>
+ <form id="professionalForm" class="manage-form" hidden>
+  <input type="hidden" id="professionalId">
+  <label>Full name<input id="professionalName" required maxlength="60"></label>
+  <label>Specialisation<input id="professionalSpecialisation" required maxlength="70"></label>
+  <label>Experience<input id="professionalExperience" required maxlength="40" placeholder="e.g. 5 years experience"></label>
+  <label>Rating<input id="professionalRating" type="number" min="1" max="5" step="0.1" value="4.8" required></label>
+  <label class="wide">Short bio<textarea id="professionalBio" rows="2" maxlength="220" placeholder="A short introduction"></textarea></label>
+  <div class="form-actions"><button class="btn btn-primary" type="submit">Save professional</button><button class="btn btn-outline" id="cancelProfessionalBtn" type="button">Cancel</button></div>
+ </form>
+ <div id="professionalList" class="manage-list"></div>
+</section>
+<section class="manage-panel" id="availabilityPanel" hidden>
+ <div class="manage-panel-head"><div><h2>Business availability</h2><p>Set the working schedule used by the customer booking page.</p></div></div>
+ <form id="availabilityForm" class="manage-form">
+  <label>Opening time<input id="openingTime" type="time" required></label>
+  <label>Closing time<input id="closingTime" type="time" required></label>
+  <label>Appointment interval<select id="slotInterval"><option value="15">15 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select></label>
+  <fieldset class="wide day-picker"><legend>Working days</legend><div class="day-options"><label><input type="checkbox" name="workingDay" value="0" > Sunday</label><label><input type="checkbox" name="workingDay" value="1" checked> Monday</label><label><input type="checkbox" name="workingDay" value="2" checked> Tuesday</label><label><input type="checkbox" name="workingDay" value="3" checked> Wednesday</label><label><input type="checkbox" name="workingDay" value="4" checked> Thursday</label><label><input type="checkbox" name="workingDay" value="5" checked> Friday</label><label><input type="checkbox" name="workingDay" value="6" checked> Saturday</label></div></fieldset>
+  <div class="form-actions"><button class="btn btn-primary" type="submit">Save availability</button></div>
+  <p class="wide" id="availabilityMessage" role="status"></p>
+ </form>
+ <p class="availability-note">The booking page will use these settings to generate available time slots. Existing demo bookings are not changed.</p>
+</section>
+<p class="demo-warning">Demo project only: changes are saved in this browser using LocalStorage. This is not secure production admin software.</p>
+</div></main>
+</body></html>

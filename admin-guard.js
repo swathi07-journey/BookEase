@@ -1,0 +1,1 @@
+(() => { try { const session=JSON.parse(localStorage.getItem("bookeaseAdminSession")||"null"); if(!session||session.role!=="admin") location.replace("account.html"); } catch { location.replace("account.html"); } })();

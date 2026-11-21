@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in or create your BookEase demo customer account.">
+  <title>Customer Account | BookEase</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/account.css">
+  <script src="js/account.js" defer></script>
+</head>
+<body>
+<div class="announcement-bar">A simpler way to plan your day <span>Your BookEase customer space</span></div>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+  <nav class="primary-nav" id="primaryNav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="index.html#how-it-works">How it works</a><a href="appointments.html">Appointments</a></nav>
+  <div class="nav-actions"><a class="login-link" href="account.html">My account</a><a class="btn btn-primary btn-small nav-book" href="services.html">Book appointment</a></div>
+</div></header>
+<main class="account-main">
+  <section class="account-shell">
+    <div class="account-visual">
+      <span class="eyebrow"><span class="eyebrow-dot"></span> WELCOME TO BOOKEASE</span>
+      <h1>Your plans,<br><span>in one place.</span></h1>
+      <p>Create a demo account to keep your customer details together and explore your appointment space.</p>
+      <div class="account-benefits">
+        <div><span>✓</span><p><strong>Simple account access</strong><small>Sign in with your customer email or admin username.</small></p></div>
+        <div><span>✓</span><p><strong>Your details, your control</strong><small>Update your name and contact information.</small></p></div>
+        <div><span>✓</span><p><strong>Appointments in one place</strong><small>Open your saved demo bookings anytime.</small></p></div>
+      </div>
+      <div class="account-note">Frontend portfolio demonstration · No real authentication</div>
+    </div>
+    <div class="account-card">
+      <div class="account-tabs" role="tablist" aria-label="Account options">
+        <button class="account-tab active" type="button" data-mode="login" role="tab" aria-selected="true">Log in</button>
+        <button class="account-tab" type="button" data-mode="register" role="tab" aria-selected="false">Create account</button>
+      </div>
+      <div id="loginPanel" class="account-panel">
+        <span class="eyebrow">GOOD TO SEE YOU</span><h2>Welcome back</h2><p class="panel-intro">Customers can sign in with email. Admins can use the demo username and password below.</p><p class="admin-hint">Admin demo: <strong>admin123</strong> / <strong>1234</strong></p>
+        <form id="loginForm" novalidate>
+          <label class="form-field">Email address / Admin username<input id="loginEmail" type="text" autocomplete="username" placeholder="Email or admin123" required></label>
+          <label class="form-field">Password<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required></label>
+          <p class="form-message" id="loginMessage" aria-live="polite"></p>
+          <button class="btn btn-primary account-submit" type="submit">Log in <span>→</span></button>
+        </form>
+        <p class="switch-copy">New to BookEase? <button type="button" class="text-button" data-switch="register">Create an account</button></p>
+      </div>
+      <div id="registerPanel" class="account-panel" hidden>
+        <span class="eyebrow">START YOUR SPACE</span><h2>Create your account</h2><p class="panel-intro">A few details are all you need for this demo.</p>
+        <form id="registerForm" novalidate>
+          <label class="form-field">Full name<input id="registerName" type="text" autocomplete="name" placeholder="Your full name" required></label>
+          <label class="form-field">Email address<input id="registerEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label class="form-field">Phone number<input id="registerPhone" type="tel" autocomplete="tel" maxlength="15" placeholder="Your phone number" required></label>
+          <label class="form-field">Create password<input id="registerPassword" type="password" autocomplete="new-password" minlength="6" placeholder="At least 6 characters" required></label>
+          <p class="form-message" id="registerMessage" aria-live="polite"></p>
+          <button class="btn btn-primary account-submit" type="submit">Create account <span>→</span></button>
+        </form>
+        <p class="switch-copy">Already have an account? <button type="button" class="text-button" data-switch="login">Log in</button></p>
+      </div>
+      <div class="privacy-note">Demo details stay in this browser's LocalStorage. Do not use a real or reused password.</div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-bottom"><span>© 2026 BookEase. Portfolio demonstration only.</span><span>No real accounts, bookings or payments</span></div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+ const toggle=document.getElementById("menuToggle"), nav=document.getElementById("primaryNav");
+ if(toggle&&nav) toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));});
+});
+</script>
+</body></html>

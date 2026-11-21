@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="View and edit your BookEase demo customer profile.">
+<title>My Profile | BookEase</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/account.css">
+<script src="js/profile.js" defer></script>
+</head>
+<body>
+<div class="announcement-bar">A simpler way to plan your day <span>Your BookEase customer space</span></div>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+<nav class="primary-nav" id="primaryNav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="appointments.html">My appointments</a></nav>
+<div class="nav-actions"><a class="login-link" href="profile.html">My profile</a><button class="btn btn-dark btn-small" id="logoutButton" type="button">Log out</button></div>
+</div></header>
+<main class="profile-main"><div class="container">
+<div class="profile-heading"><span class="eyebrow"><span class="eyebrow-dot"></span> CUSTOMER ACCOUNT</span><h1>Your profile<span>.</span></h1><p>View and update the details saved in this browser.</p></div>
+<div class="profile-layout">
+<aside class="profile-side"><div class="profile-avatar" id="profileAvatar">B</div><h2 id="sideName">BookEase customer</h2><p id="sideEmail">customer@example.com</p><div class="profile-side-links"><a class="selected" href="profile.html">Personal details</a><a href="appointments.html">My appointments</a><a href="services.html">Explore services</a></div><div class="profile-demo-note">Demo account · Browser storage</div></aside>
+<section class="profile-card">
+<div class="profile-card-heading"><div><h2>Personal information</h2><p>Keep your contact details up to date.</p></div><button class="btn btn-outline" id="editButton" type="button">Edit profile</button></div>
+<div id="profileView" class="profile-details">
+<div><small>Full name</small><strong id="viewName">—</strong></div><div><small>Email address</small><strong id="viewEmail">—</strong></div><div><small>Phone number</small><strong id="viewPhone">—</strong></div>
+</div>
+<form id="profileForm" class="profile-form" hidden novalidate>
+<label class="form-field">Full name<input id="editName" type="text" required></label>
+<label class="form-field">Email address<input id="editEmail" type="email" required></label>
+<label class="form-field">Phone number<input id="editPhone" type="tel" maxlength="15" required></label>
+<p class="form-message" id="profileMessage" aria-live="polite"></p>
+<div class="profile-form-actions"><button class="btn btn-primary" type="submit">Save changes</button><button class="btn btn-outline" id="cancelEdit" type="button">Cancel</button></div>
+</form>
+<div class="profile-shortcut"><div><strong>Need to check a booking?</strong><span>See your upcoming and past demo appointments.</span></div><a class="btn btn-primary" href="appointments.html">View appointments →</a></div>
+</section></div>
+<p class="demo-disclaimer"><strong>Demo account</strong> Your profile is saved only in this browser. This project does not use a real authentication server.</p>
+</div></main>
+<footer class="site-footer"><div class="container footer-bottom"><span>© 2026 BookEase. Portfolio demonstration only.</span><span>No real accounts, bookings or payments</span></div></footer>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{const t=document.getElementById("menuToggle"),n=document.getElementById("primaryNav");if(t&&n)t.addEventListener("click",()=>{const o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o));});});
+</script>
+</body></html>

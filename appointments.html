@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="View and manage your saved BookEase demo appointments.">
+<title>My Appointments | BookEase</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/appointments.css">
+<script src="js/data.js" defer></script><script src="js/main.js" defer></script><script src="js/appointments.js" defer></script>
+</head><body>
+<div class="announcement-bar">A simpler way to plan your day <span>Your appointments, all in one place</span></div>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+<nav class="primary-nav" id="primaryNav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="index.html#how-it-works">How it works</a><a href="index.html#about">About us</a><a href="index.html#contact">Contact</a></nav>
+<div class="nav-actions"><a class="login-link" href="profile.html">My profile</a><a class="btn btn-dark btn-small" href="account.html#register">Sign up</a><a class="btn btn-primary btn-small nav-book" href="services.html">Book appointment</a></div>
+</div></header>
+<main><section class="appointments-hero"><div class="container">
+<div class="appointments-title"><span class="eyebrow"><span class="eyebrow-dot"></span> YOUR BOOKEASE SPACE</span><h1>My <span>appointments.</span></h1><p>Keep track of the demo appointments you have created in this browser.</p></div>
+<div class="appointment-stats">
+<div class="stat-card"><span class="stat-icon">▣</span><div><strong id="totalCount">0</strong><small>Total bookings</small></div></div>
+<div class="stat-card"><span class="stat-icon">◷</span><div><strong id="upcomingCount">0</strong><small>Upcoming</small></div></div>
+<div class="stat-card"><span class="stat-icon">✓</span><div><strong id="completedCount">0</strong><small>Past appointments</small></div></div>
+</div></div></section>
+<section class="appointments-section"><div class="container">
+<div class="appointments-toolbar"><div><h2>Your bookings</h2><p>Manage your sample appointments below.</p></div><a class="btn btn-primary" href="services.html">＋ Book a service</a></div>
+<div class="appointment-filters" role="tablist" aria-label="Filter appointments">
+<button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All <span id="allTabCount">0</span></button>
+<button class="filter-tab" data-filter="upcoming" role="tab" aria-selected="false">Upcoming</button>
+<button class="filter-tab" data-filter="past" role="tab" aria-selected="false">Past</button>
+<button class="filter-tab" data-filter="cancelled" role="tab" aria-selected="false">Cancelled</button></div>
+<div class="appointment-list" id="appointmentList" aria-live="polite"></div>
+<div class="demo-disclaimer"><strong>Demo reminder</strong><span>These bookings are stored only in this browser. They are not sent to a real business and do not represent confirmed appointments.</span></div>
+</div></section></main>
+<footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark">B</span><span>Book<span class="brand-accent">Ease</span></span></a><p>Your time. Your choice. Your appointment. A simple demo platform for discovering services and planning appointments.</p></div><div><h3>Explore</h3><a href="index.html">Home</a><a href="services.html">Services</a><a href="index.html#how-it-works">How it works</a></div><div><h3>Popular services</h3><a href="services.html">Beauty & Salon</a><a href="services.html">Hair styling</a><a href="services.html">Fitness</a></div><div><h3>Support</h3><a href="index.html#contact">Contact us</a><a href="appointments.html">My appointments</a><a href="account.html">My account</a></div></div><div class="container footer-bottom"><span>© 2026 BookEase. Portfolio demonstration only.</span><span>No real bookings or payments</span></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
