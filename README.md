@@ -110,4 +110,5 @@ BookEase is a frontend portfolio project developed to demonstrate my skills in U
 ## Project Screenshots
 
 ### Homepage
-![BookEase Homepage](screenshots/homepage.png)
+![BookEase Homepage](screenshots/<img width="1882" height="900" alt="image" src="https://github.com/user-attachments/assets/c16314fc-b02e-48a7-9c8c-faa8f029e2db" />
+)
