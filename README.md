@@ -107,3 +107,7 @@ These predefined credentials are provided only to demonstrate the admin dashboar
 ## Project Purpose
 
 BookEase is a frontend portfolio project developed to demonstrate my skills in UI/UX design and frontend web development through a practical appointment booking and business management application.
+## Project Screenshots
+
+### Homepage
+![BookEase Homepage](screenshots/homepage.png)
