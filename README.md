@@ -119,5 +119,6 @@ BookEase is a frontend portfolio project developed to demonstrate my skills in U
 <img width="1887" height="895" alt="image" src="https://github.com/user-attachments/assets/b8351575-33c3-4857-911a-1727905b6558" />
 
 ### Admin Dashboard
-![BookEase Dashboard](screenshots/dashboard.png)
+<img width="1864" height="898" alt="image" src="https://github.com/user-attachments/assets/a41578cc-d1a2-4ee5-9b4a-7bba6d482674" />
+
 
